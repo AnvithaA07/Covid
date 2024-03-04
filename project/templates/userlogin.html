@@ -1,0 +1,36 @@
+{% extends 'baselogin.html' %}
+{% block title %} User Login{% endblock title %}
+{% block form %}
+<h2>Login </h2>
+
+<div class="row">
+<div class="col-md-4"></div>
+
+<div class="col-md-4">
+
+
+
+
+<form method="POST" action="{{ url_for('login') }}">
+    <div class="form-group">
+        <label for="srf">SRF ID</label>
+        <input type="text" class="form-control" id="srf" name="srf" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+<a class="text-dark" href="/signup">New User? Signup </a>
+</div>
+
+
+<div class="col-md-4"></div>
+
+</div>
+
+
+
+{% endblock form %}
